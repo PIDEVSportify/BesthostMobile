@@ -1,0 +1,51 @@
+#Constants {
+    includeNativeBool: true;
+}
+
+Ajouteroffer {
+    border: 1px solid #6a706e;
+    border-radius: 25px;
+    font-family: "Bauhaus 93", sans-serif;
+    color: #ffffff;
+    text-align:center;
+    background-color: #a94064;
+    font-size: 60px;
+    margin-top: 9mm;
+}
+
+displayoffers {
+    border: 1px solid #6a706e;
+    border-radius: 25px;
+    font-family: "Bauhaus 93", sans-serif;
+    color: #ffffff;
+    text-align:center;
+    background-color: #a94064;
+    font-size: 60px;
+    margin-top: 7mm;
+}
+
+displaysites {
+    border: 1px solid #6a706e;
+    border-radius: 25px;
+    font-family: "Bauhaus 93", sans-serif;
+    color: #ffffff;
+    text-align:center;
+    background-color: #a94064;
+    font-size: 60px;
+    margin-top: 5mm;
+}
+
+form{
+    background-image: url(../src/Webp.net-resizeimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+label1l, label2l,label3l{
+    font-size: 120px;
+    font-family: "Josefin Sans",sans-serif;
+    font-style: normal;
+    color: white;
+    margin-top: 3mm;
+}
