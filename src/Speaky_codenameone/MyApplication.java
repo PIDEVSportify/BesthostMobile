@@ -3,13 +3,10 @@ package Speaky_codenameone;
 
 import static com.codename1.ui.CN.*;
 
-import Services.Camping_c;
-import Templates.OfferGuimobile.AfficherOffersGuimobile;
-import Templates.OfferGuimobile.AjouterOfferGuimobile;
-import Templates.SiteGuimobile.AfficherSitesGuimobile;
-import com.codename1.googlemaps.MapContainer;
+import Gui.OfferGuimobile.AfficherOffersGuimobile;
+import Gui.OfferGuimobile.AjouterOfferGuimobile;
+import Gui.SiteGuimobile.AfficherSitesGuimobile;
 import com.codename1.ui.*;
-import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.io.Log;

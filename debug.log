@@ -80,3 +80,86 @@ https://developers.google.com/maps/documentation/javascript/error-messages#inval
 [0515/021613.242:INFO:CONSOLE(22)] "Adding path as json with: [{"pathStrokeColor":0, "pathStrokeWidth":1}, {"lat":78.12640156722833, "lon": -106.92029443455145}, {"lat":-33.866, "lon": 151.195}, {"lat":-18.142, "lon": 178.431}, {"lat":21.291, "lon": -157.821}, {"lat":37.423, "lon": -122.091}]", source: https://cn1app/streams/1 (22)
 [0515/021613.242:INFO:CONSOLE(22)] "Inside ready now", source: https://cn1app/streams/1 (22)
 [0515/021613.242:INFO:CONSOLE(22)] "Stroke color is: #000000", source: https://cn1app/streams/1 (22)
+[0517/181930.811:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/182014.101:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 57
+[0517/182014.102:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 55
+[0517/182014.102:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 51
+[0517/182014.105:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 53
+[0517/182014.109:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 49
+[0517/182014.230:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 59
+[0517/182014.311:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 61
+[0517/182041.165:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/2 (22)
+[0517/183626.322:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/183635.234:INFO:CONSOLE(22)] "Adding path as json with: [{"pathStrokeColor":0, "pathStrokeWidth":1}, {"lat":-33.866, "lon": 151.195}, {"lat":-18.142, "lon": 178.431}, {"lat":21.291, "lon": -157.821}, {"lat":37.423, "lon": -122.091}]", source: https://cn1app/streams/1 (22)
+[0517/183635.235:INFO:CONSOLE(22)] "Inside ready now", source: https://cn1app/streams/1 (22)
+[0517/183635.235:INFO:CONSOLE(22)] "Stroke color is: #000000", source: https://cn1app/streams/1 (22)
+[0517/184122.325:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/192831.246:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/192838.735:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 53
+[0517/192838.739:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 55
+[0517/192838.848:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 59
+[0517/192838.848:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 61
+[0517/192838.848:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 57
+[0517/192838.848:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 63
+[0517/192838.849:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 67
+[0517/192952.801:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 151
+[0517/192952.821:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 147
+[0517/192952.844:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 149
+[0517/192952.901:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 153
+[0517/192953.858:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 197
+[0517/192953.873:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 205
+[0517/192953.885:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 203
+[0517/192953.968:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 201
+[0517/192957.496:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/2 (22)
+[0517/193000.398:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 335
+[0517/193000.415:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 337
+[0517/193000.415:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 333
+[0517/193000.450:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 331
+[0517/193527.659:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/194641.088:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 55
+[0517/194641.136:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 53
+[0517/194641.217:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 47
+[0517/194641.307:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 51
+[0517/194641.307:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 49
+[0517/194641.335:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 45
+[0517/194641.929:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/205320.779:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/205524.644:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/205614.198:INFO:CONSOLE(22)] "Adding path as json with: [{"pathStrokeColor":0, "pathStrokeWidth":1}, {"lat":-33.866, "lon": 151.195}, {"lat":-18.142, "lon": 178.431}, {"lat":21.291, "lon": -157.821}, {"lat":37.423, "lon": -122.091}]", source: https://cn1app/streams/1 (22)
+[0517/205614.198:INFO:CONSOLE(22)] "Inside ready now", source: https://cn1app/streams/1 (22)
+[0517/205614.199:INFO:CONSOLE(22)] "Stroke color is: #000000", source: https://cn1app/streams/1 (22)
+[0517/205626.560:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 549
+[0517/205626.567:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 551
+[0517/205626.622:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 553
+[0517/205626.916:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 565
+[0517/205626.944:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 567
+[0517/205626.944:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 571
+[0517/205627.032:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 569
+[0517/205627.032:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 573
+[0517/210930.415:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/212252.969:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/212420.098:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/213150.866:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 111
+[0517/213150.892:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 113
+[0517/213151.289:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 129
+[0517/213151.311:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 131
+[0517/213151.317:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 133
+[0517/213151.336:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 137
+[0517/213151.346:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 139
+[0517/213151.368:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 141
+[0517/213151.400:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 143
+[0517/213151.421:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 145
+[0517/213151.430:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 147
+[0517/213154.636:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/213356.678:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/2 (22)
+[0517/213620.681:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/221138.430:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/223016.487:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/223129.301:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/230124.089:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/232856.623:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0517/233550.288:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0518/001029.262:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0518/004252.104:INFO:CONSOLE(511)] "Uncaught TypeError: getMapContainer(...).fireMapChangeEvent is not a function", source: https://cn1app/streams/1 (511)
+[0518/004300.416:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0518/004403.362:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/2 (22)

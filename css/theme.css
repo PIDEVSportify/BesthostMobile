@@ -56,7 +56,7 @@ displaysites {
 }
 
 form{
-    background-image: url(../src/Webp.net-resizeimage.jpg);
+    background-image: url(../src/Beautiful-Nature-iPhone-X-Wallpaper-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
@@ -67,8 +67,14 @@ formtwo{
     background-size: cover;
     background-color: black;
 }
+formsite{
+    background-image: url(../src/Beautiful-Nature-Apple-iPhone-X-Wallpaper-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
 formthree{
-    background-image: url(../src/lonely-hiker.jpg);
+    background-image: url(../src/Beautiful-Nature-Apple-iPhone-X-Wallpaper-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
@@ -81,6 +87,20 @@ label1l, label2l,label3l{
     color: #ffffff;
     margin-top: 3mm;
 }
+label11l{
+    font-size: 180px;
+    font-family: "Josefin Sans",sans-serif;
+    font-style: normal;
+    color: #ffffff;
+    margin-top: 6mm;
+    margin-left: 6mm;
+}
+label22l{
+    font-size: 100px;
+    font-family: "Josefin Sans",sans-serif;
+    font-style: normal;
+    color: #ffffff;
+}
 appuyer{
     font-size: 7pt;
     font-family: "Josefin Sans",sans-serif;
@@ -92,4 +112,14 @@ appuyer1{
     font-family: "Josefin Sans",sans-serif;
     font-style: normal;
     color: #a94064;
+}
+map {
+    border: 1px solid #6a706e;
+    border-radius: 25px;
+    font-family: "Bauhaus 93", sans-serif;
+    color: #ffffff;
+    text-align:center;
+    background-color: #a94064;
+    font-size: 60px;
+    margin-top: 2mm;
 }
