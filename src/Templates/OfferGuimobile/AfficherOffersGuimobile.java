@@ -18,7 +18,7 @@ public class AfficherOffersGuimobile{
         ArrayList<offre> getId_offer=new ArrayList<>();
         Offre_c c=new Offre_c();
         Form hi = new Form("Offers Details", new BorderLayout());
-        hi.getStyle().setBgColor(0xffffff);
+        hi.setUIID("formtwo");
         ArrayList<Map<String, Object>> data = new ArrayList<>();
         try {
             for(offre l:c.result()) {

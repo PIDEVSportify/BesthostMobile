@@ -16,12 +16,9 @@ public class AjouterRatingGuimobile extends Form {
    public AjouterRatingGuimobile(Form back,int id_rating){
        Camping_c c=new Camping_c();
        Form rate = new Form(new BoxLayout(BoxLayout.Y_AXIS));
+       rate.setUIID("formthree");
        Button buttonrate=new Button("Rate");
-       buttonrate.getUnselectedStyle().setBackgroundType(Style.BACKGROUND_GRADIENT_RADIAL);
-       buttonrate.getUnselectedStyle().setBackgroundGradientEndColor(0xff9529);
-       buttonrate.getUnselectedStyle().setBackgroundGradientStartColor(0xff9529);
-       buttonrate.getAllStyles().setFgColor(0xffffff);
-       rate.getStyle().setBgColor(0xffffff);
+       buttonrate.setUIID("Rate");
        Slider starRank = new Slider();
        starRank=createStarRankSlider();
        starRank.setMaxValue(5);
@@ -29,10 +26,24 @@ public class AjouterRatingGuimobile extends Form {
        Slider finalStarRank = starRank;
        buttonrate.addActionListener(l ->{
            value[0] = finalStarRank.getProgress();
-           try {
-               c.Updaterate(new camping(id_rating, value[0]));
-           } catch (IOException e) {
-               e.printStackTrace();
+           if (value[0]==0)
+           {
+               if(Dialog.show("Warning", "Zero rating", "Keep it", "Cancel")) {
+                   try {
+                       c.Updaterate(new camping(id_rating, value[0]));
+                   } catch (IOException e) {
+                       e.printStackTrace();
+                   }
+                   Dialog.show("Success", "I'm really sad to hear that", "Ok", null);
+               }
+           }
+           else {
+               try {
+                   c.Updaterate(new camping(id_rating, value[0]));
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+               Dialog.show("Success", "You have successfully added a new Rate.", "Ok", null);
            }
            value[0] =0;
            finalStarRank.setProgress(0);

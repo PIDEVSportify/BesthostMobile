@@ -21,32 +21,29 @@ import static com.codename1.ui.CN.TOP;
 
 public class AjouterOfferGuimobile extends Form {
     public AjouterOfferGuimobile(Form previous) {
+        setTitle("Save your offer");
+        setUIID("formtwo");
         Offre_c c=new Offre_c();
-        getStyle().setBgColor(0xffffff);
-
         TextField Nb_places=new TextField("","Nombre des places",20, TextArea.NUMERIC);
         TextField Prix_offre=new TextField("","Prix Dt",20,TextArea.NUMERIC);
 
         Label datedebutoffre=new Label("Date début:");
+        datedebutoffre.getAllStyles().setFgColor(0xffffff);
         DateSpinner datedebutspinner=new DateSpinner();
 
         Label datefinoffre=new Label("Date fin:");
+        datefinoffre.getAllStyles().setFgColor(0xffffff);
         DateSpinner datefinspinner=new DateSpinner();
 
         Container c1=new Container(new FlowLayout(LEFT,TOP));
         Container c2=new Container(BoxLayout.y());
 
         Button submit=new Button("Save");
+        submit.setUIID("Save");
         c1.add(Nb_places);
         c1.getAllStyles().setMargin(Component.BOTTOM,30);
         c2.add(datedebutoffre).add(datedebutspinner).add(datefinoffre).add(datefinspinner).add(Prix_offre).add(submit);
         c2.getAllStyles().setMargin(Component.BOTTOM,30);
-
-
-        submit.getUnselectedStyle().setBackgroundType(Style.BACKGROUND_GRADIENT_RADIAL);/* color back */
-        submit.getUnselectedStyle().setBackgroundGradientEndColor(0x00aae5);
-        submit.getUnselectedStyle().setBackgroundGradientStartColor(0x00aae5);
-        submit.getAllStyles().setFgColor(0xffffff);/* color text */
 
         submit.addActionListener(evt -> {
             String datedebut_crypto = datedebutspinner.getCurrentDay()+"-"+datedebutspinner.getCurrentMonth()+"-"+datedebutspinner.getCurrentYear();
