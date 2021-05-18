@@ -1,12 +1,13 @@
 package Gui;
 
 import Services.SideMenuToolbar;
-import com.codename1.ui.Dialog;
-import com.codename1.ui.Form;
+import com.codename1.io.FileSystemStorage;
+import com.codename1.io.Util;
+import com.codename1.ui.*;
 import Services.ActivityServices;
-import com.codename1.ui.Toolbar;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.MultiList;
@@ -31,7 +32,7 @@ public class AfficherActivity extends Form {
     }*/
    public AfficherActivity() {
      //  previous.setTitle("");
-       setLayout(BoxLayout.y());
+      setLayout(BoxLayout.y());
 
        Toolbar sideMenu=this.getToolbar();
        this.setTitle("Activities");
@@ -40,6 +41,9 @@ public class AfficherActivity extends Form {
 
        DefaultListModel<Map<String, Object>> model = new DefaultListModel<>(data);
        MultiList ml = new MultiList(model);
+
+
+
        ml.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent evt) {
@@ -55,6 +59,19 @@ public class AfficherActivity extends Form {
                //new ListMaisonForm().show();
            }
        });
+
+
+       Button devGuide = new Button("Show PDF");
+       devGuide.addActionListener(e -> {
+           FileSystemStorage fs = FileSystemStorage.getInstance();
+           String fileName = fs.getAppHomePath() + "pdf-sample.pdf";
+           if(!fs.exists(fileName)) {
+               Util.downloadUrlToFile("http://www.polyu.edu.hk/iaee/files/pdf-sample.pdf", fileName, true);
+           }
+           Display.getInstance().execute(fileName);
+       });
+
+       add(devGuide);
        add(ml);
        show();
        //getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e-> previous.showBack());

@@ -3,6 +3,8 @@ package Gui;
 import Entities.Maison;
 import Services.MaisonService;
 import Services.SideMenuToolbar;
+import com.codename1.io.FileSystemStorage;
+import com.codename1.io.Util;
 import com.codename1.ui.*;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
@@ -56,6 +58,17 @@ public class MaisonHome extends Form {
 
         MultiList ml = new MultiList(model);
 
+        Button devGuide = new Button("Show PDF");
+        devGuide.addActionListener(e -> {
+            FileSystemStorage fs = FileSystemStorage.getInstance();
+            String fileName = fs.getAppHomePath() + "pdf-sample.pdf";
+            if(!fs.exists(fileName)) {
+                Util.downloadUrlToFile("http://www.polyu.edu.hk/iaee/files/pdf-sample.pdf", fileName, true);
+            }
+            Display.getInstance().execute(fileName);
+        });
+
+
         ml.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
@@ -76,7 +89,7 @@ public class MaisonHome extends Form {
 
 
 
-
+        add(devGuide);
         add(ml);
         show();
 
