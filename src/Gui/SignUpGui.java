@@ -1,22 +1,17 @@
-package GUI;
+package Gui;
 
-import MaisonEntities.User;
+import Entities.User;
 import Services.UserServices;
 import com.codename1.capture.Capture;
 import com.codename1.charts.util.ColorUtil;
-import com.codename1.components.ImageViewer;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.io.FileSystemStorage;
 import com.codename1.ui.*;
 import com.codename1.ui.Button;
-import com.codename1.ui.Container;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
-import com.codename1.ui.geom.Dimension;
-import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 

@@ -1,4 +1,4 @@
-package MaisonEntities;
+package Entities;
 
 
 public class User extends com.codename1.facebook.User {

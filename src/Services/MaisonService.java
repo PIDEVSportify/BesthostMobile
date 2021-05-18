@@ -1,18 +1,22 @@
 package Services;
 
-import MaisonEntities.Maison;
+import Entities.Maison;
 import Utils.Statics;
 import com.codename1.io.*;
+import com.codename1.l10n.ParseException;
 import com.codename1.ui.events.ActionListener;
 
 import java.io.CharArrayReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MaisonService {
 
+        public static Maison maison;
+    ArrayList<Map<String, Object>> data = new ArrayList<>();
         public static MaisonService instance;
         private ConnectionRequest req;
         public MaisonService(){
@@ -25,7 +29,7 @@ public class MaisonService {
             return instance;
         }
 
-        public boolean resultOK;
+        /*public boolean resultOK;
         public boolean addMaisons(Maison m){
                 String url = Statics.BASE_URL+"/jsonMaisonAdd/new?nom="+m.getNom()+"&adresse="+m.getAdresse()+"/&description="+m.getDescription()+"&type="+m.getType()+"&nombre_chambres="+m.getNombre_chambres()+"&prix="+m.getPrix();
             ConnectionRequest req = new ConnectionRequest(url);
@@ -38,117 +42,66 @@ public class MaisonService {
             });
             NetworkManager.getInstance().addToQueueAndWait(req);
             return resultOK;
-        }
+        }*/
 
 
    public ArrayList<Maison> maisons;
 
-        public ArrayList<Maison> parseMaison(String jsonText) throws IOException {
-            maisons=new ArrayList<>();
-            JSONParser j = new JSONParser();
-            Map<String,Object> maisonListJson= j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+    public ArrayList<Map<String, Object>> parseMaison(String jsonText) throws IOException, ParseException {
+        JSONParser j = new JSONParser();
+        Map<String,Object> MaisonsListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+        List<Map<String,Object>> list = (List<Map<String,Object>>)MaisonsListJson.get("root");
+        ArrayList<Map<String, Object>> data = new ArrayList<>();
+        for(Map<String,Object> obj : list){
+            Maison m = new Maison();
+            //float id = Float.parseFloat(obj.get("id").toString());
+            m.setNom(obj.get("nom").toString());
+            m.setAdresse(obj.get("adresse").toString());
 
-            List<Map<String,Object>> list = (List<Map<String, Object>>)maisonListJson.get("root");
-            for (Map<String,Object> obj : list){
-                Maison m = new Maison();
-                //float id = Float.parseFloat(obj.get("id").toString());
-                m.setNom(obj.get("nom").toString());
-                m.setAdresse(obj.get("adresse").toString());
-                m.setDescription(obj.get("description").toString());
-                m.setType(obj.get("type").toString());
+            m.setType(obj.get("type").toString());
 
+            m.setDescription(obj.get("description").toString());
+            data.add(createListEntry(m));
 
-                maisons.add(m);
-
-            }
-
-            return maisons;
         }
-        public ArrayList <Maison> getAllMaisons(){
-            String url = Statics.BASE_URL+"/jsonMaisonAll";
-
-             req.setUrl(url);
-             req.setPost(false);
-             req.addResponseListener(new ActionListener<NetworkEvent>() {
-                 @Override
-                 public void actionPerformed(NetworkEvent evt) {
-                     try {
-                         maisons = parseMaison(new String(req.getResponseData()));
-                         req.removeResponseListener(this);
-                     } catch (IOException e) {
-                         e.printStackTrace();
-                     }
-
-                 }
-             });
-            NetworkManager.getInstance().addToQueueAndWait(req);
-             return maisons;
-        }
-
-    // display all users
-  /*  public ArrayList<Maison>displayMaisons() {
-        ArrayList<Maison> result = new ArrayList();
-
-        String url = Statics.BASE_URL+"/displayMaison";
-        ConnectionRequest req = new ConnectionRequest(url);
+        return  data;
+    }
+    public ArrayList<Map<String, Object>> getAllMaisons(){
+        String url = Statics.BASE_URL+"/jsonMaisonAll";
         req.setUrl(url);
-
-        req.addResponseListener(new ActionListener<NetworkEvent>(){
+        req.setPost(false);
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
-                JSONParser jsonp;
-                jsonp = new JSONParser();
-
                 try {
-                    Map<String,Object>mapUsers = jsonp.parseJSON(new CharArrayReader(new String(req.getResponseData()).toCharArray()));
-                    List<Map<String, Object>> listOfMaps = (List<Map<String, Object>>) mapUsers.get("root");
-
-                    for (Map<String, Object> obj : listOfMaps){
-                        Maison maison  = new Maison();
-
-//                        float id = Float.parseFloat(obj.get("id").toString());
-
-                        String nom = obj.get("nom").toString();
-                        String addresse = obj.get("addresse").toString();
-                        String description = obj.get("description").toString();
-                        String type = obj.get("type").toString();
-                        String prix = obj.get("prix").toString();
-                        String nb_chambre = obj.get("nb_chambre").toString();
-  //                     float phone = Float.parseFloat(obj.get("phone").toString());
-
-                        //maison.setId((int)id);
-                        maison.setNom(nom);
-                        maison.setDescription(description);
-                        maison.setAdresse(addresse);
-                        maison.setType(type);
-                        maison.setPrix(Integer.valueOf(prix));
-
-                        maison.setNombre_chambres(Integer.parseInt(nb_chambre));
-
-                        result.add(maison);
-
-                    }
-                } catch (IOException ex) {
-
+                    data = parseMaison(new String(req.getResponseData()));
+                } catch (IOException | ParseException e) {
+                    e.printStackTrace();
                 }
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                req.removeResponseListener(this);
             }
-
         });
 
+
         NetworkManager.getInstance().addToQueueAndWait(req);
-        return result;
+        return data;
     }
-*/
+
+    private Map<String, Object> createListEntry(Maison m) {
+        Map<String, Object> entry = new HashMap<>();
+        entry.put("Line1",m.getNom());
+        entry.put("Line2",m.getAdresse());
+        entry.put("Line3",m.getType());
+        entry.put("Line4",m.getDescription());
+
+        return entry;
+    }
+
+    public static Maison getMaison(){
+        return maison;
+    }
+
+
 }
 
 
-
-
-
-//int prix = Integer.parseInt(obj.get("prix").toString()) ;
-//m.setPrix((int)prix);
-//  m.setPrix(Integer.valueOf(obj.get("prix").toString()));
-
-// int nb_chambres = Integer.parseInt(obj.get("nombre_chambres").toString()) ;
-// m.setNombre_chambres((int)nb_chambres);

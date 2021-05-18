@@ -1,13 +1,10 @@
 package Services;
-import MaisonEntities.User;
-import GUI.HomeGui;
-import GUI.LoginGui;
-import GUI.ProfileGui;
+import Entities.User;
+import Gui.LoginGui;
 import com.codename1.components.InfiniteProgress;
 import com.codename1.io.*;
 import com.codename1.l10n.SimpleDateFormat;
 import com.codename1.ui.*;
-import com.codename1.ui.layouts.BorderLayout;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

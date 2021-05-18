@@ -1,25 +1,14 @@
-package GUI;
+package Gui;
 
 
-import MaisonEntities.User;
+import Entities.User;
 import Services.UserServices;
 import com.codename1.charts.util.ColorUtil;
-import com.codename1.components.ImageViewer;
-import com.codename1.components.ScaleImageLabel;
-import com.codename1.facebook.FaceBookAccess;
-import com.codename1.io.ConnectionRequest;
-import com.codename1.social.FacebookConnect;
-import com.codename1.social.Login;
-import com.codename1.social.LoginCallback;
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
-
-
-import java.io.IOException;
 
 public class LoginGui extends  Form{
 

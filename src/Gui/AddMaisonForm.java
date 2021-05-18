@@ -1,7 +1,6 @@
-package GUI;
+package Gui;
 
-import MaisonEntities.Maison;
-import Services.MaisonService;
+import Entities.Maison;
 import com.codename1.ui.Button;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
@@ -36,7 +35,7 @@ public class AddMaisonForm extends Form {
 
                 System.out.println(tfNom.getText());
                 System.out.println(m);
-                 new MaisonService().addMaisons(m);
+                // new MaisonService().addMaisons(m);
             }
 
         });

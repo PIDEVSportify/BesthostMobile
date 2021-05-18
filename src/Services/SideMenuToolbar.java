@@ -1,18 +1,13 @@
 package Services;
-import GUI.*;
-import MaisonEntities.User;
+import Gui.*;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.components.ImageViewer;
-import com.codename1.io.FileSystemStorage;
 import com.codename1.ui.*;
 import com.codename1.ui.Container;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-
-
-import java.io.IOException;
 
 public class SideMenuToolbar {
 
@@ -38,11 +33,13 @@ public class SideMenuToolbar {
 
         });
         toolbar.addMaterialCommandToSideMenu("Maison Hote", FontImage.MATERIAL_LOCATION_ON, e -> {
-            new MaisonHome().show();
+          new MaisonHome().show();
+
 
         });
         toolbar.addMaterialCommandToSideMenu("Activities", FontImage.MATERIAL_ADD_CIRCLE, e -> {
             new AfficherActivity().show();
+
 
         });
 

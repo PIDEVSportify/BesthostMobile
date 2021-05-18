@@ -1,19 +1,15 @@
-package GUI;
+package Gui;
 
 
-import MaisonEntities.User;
+import Entities.User;
 import Services.SideMenuToolbar;
 import Services.UserServices;
 import com.codename1.capture.Capture;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.components.Accordion;
-import com.codename1.components.FileEncodedImage;
 import com.codename1.components.ImageViewer;
 import com.codename1.io.FileSystemStorage;
 import com.codename1.ui.*;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.geom.Dimension;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
